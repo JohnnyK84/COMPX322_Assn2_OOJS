@@ -1,21 +1,26 @@
-<?php
+<?php  require_once('connect.php');
 
 	/**************************
-	 * Add your code to connect to your database here
+	 * Query database for all information for weather table to populate select options
 	 */
-	 
-	
-	
-	
-
-   /***************************
-    * 
-    * Add code here to query the DB for weather information for the given town
-    * 
-    * Construct a PHP array object containing the weather data 
-    * and return as JSON
-    * 
-    */
+    $query = "SELECT * FROM weather";
+    $result = $conn->query($query);
+    
+    //iterate over all rows in table and add each town name to array
+    while ($row = $result->fetch()) {
+        $arr[] = array (
+            "town" => $row['town'],
+            "outlook" =>$row['outlook'],
+            "min_temp" =>$row['min_temp'],
+            "max_temp" =>$row['max_temp'],
+        );
+    }
+    
+    //convert to JSON array
+    $json = json_encode($arr);
+    
+    echo $json;        			
+   
    
 	
 

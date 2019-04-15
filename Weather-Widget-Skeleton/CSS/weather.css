@@ -1,15 +1,6 @@
 body {
     font: 100% arial, sans-serif;
 }
-
-input {
-    margin: 6px;
-    border-style:inset;
-    border-color: #FFFF66;
-    border-width: 1px;
-    font: 100% arial, sans-serif;
-}
-
 .title {
     background-color: #FFD700;
     text-indent: 7px;
@@ -18,21 +9,31 @@ input {
     padding-bottom: 5px;
 }
 
-.toolbar {
+.selectContainer, .sortContainer, .wLines, .outputContainer, th {
     padding: 5px;
+    margin-top: 1em;
+}
+
+.townSelecter {
+    float: right;
+}
+
+td,th {
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    float: right;
+    margin: 5px;
 }
 
 .list {
     padding: 5px;
 }
 
-.section {
-    background-color: white;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
 .monitor {
+    width: 400px;
     background-color: #F9F7BA;
     float: left;
     -moz-box-shadow: 7px 7px 8px #818181;
@@ -40,13 +41,7 @@ input {
     margin: 20px;
 }
 
-.numeric {
-    font: 100% arial, sans-serif;
-    text-align:right;
-    float:right;
-}
-
-.section_label {
-    font: 100% arial, sans-serif;
-    padding-left: 2px;
+label {
+    font-size: 14pt;
+    font-weight: 700;
 }
